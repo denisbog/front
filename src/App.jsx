@@ -3,15 +3,28 @@ import Post from "./components/Post";
 function App() {
   const items = 8
   return (
-    <div class="h-screen w-screen bg-[url('background.jpg')] bg-cover">
-      <div class="absolute p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center">Home page</div>
-      <div class="relative p-3 w-screen gap-3 top-16 flex overflow-x-scroll">
+    <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover relative">
+      <div class="p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center">Home page</div>
+      <div class="p-3 w-screen gap-3 top-16 flex overflow-x-scroll">
         {
           Array.from({ length: items }).map(_element => {
             return <Post />
           })
         }
       </div>
+
+      <div class="flex">
+        <div class="w-96">
+          {
+            Array.from({ length: 10 }).map(_elemnt => {
+              return <div class="bg-white p-2 m-2 h-20 rounded">post</div>
+            })
+          }
+        </div>
+        <div class="bg-white m-2 w-screen rounded bg-opacity-50">map</div>
+      </div>
+      <div class="h-48"></div>
+      <div class="absolute bottom-0 inset-x-0 bg-white h-36 bg-opacity-20 text-white p-5">footer</div>
     </div>
   )
 }
