@@ -1,3 +1,4 @@
+import Map from "./components/Map";
 import Post from "./components/Post";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
             })
           }
         </div>
-        <div class="bg-white m-2 w-screen rounded bg-opacity-50">map</div>
+        <div class="bg-white m-2 w-screen rounded bg-opacity-50 p-2"><Map /></div>
       </div>
       <div class="h-48"></div>
       <div class="absolute bottom-0 inset-x-0 bg-white h-36 bg-opacity-20 text-white p-5">footer</div>
