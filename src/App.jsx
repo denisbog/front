@@ -14,10 +14,10 @@ function App() {
         }
       </div>
 
-      <div class="flex">
-        <div class="w-96">
+      <div class="flex max-h-screen h-[800px]">
+        <div class="w-96 overflow-auto">
           {
-            Array.from({ length: 10 }).map(_elemnt => {
+            Array.from({ length: 20 }).map(_elemnt => {
               return <div class="bg-white p-2 m-2 h-20 rounded">post</div>
             })
           }
