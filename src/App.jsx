@@ -14,7 +14,7 @@ function App() {
         }
       </div>
 
-      <div class="flex max-h-screen h-[800px]">
+      <div class="flex h-[75vh]">
         <div class="w-96 overflow-auto">
           {
             Array.from({ length: 20 }).map(_elemnt => {
