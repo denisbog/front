@@ -1,6 +1,7 @@
 import { createSignal } from "solid-js";
 import Map from "./components/Map";
 import Post from "./components/Post";
+import { Motion } from "@motionone/solid";
 
 function App() {
   const [warning, setWarning] = createSignal(false)
@@ -8,12 +9,16 @@ function App() {
 
 
   return (
+
     <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover relative">
       {
         warning() &&
-        < div class="fixed z-[2000] bg-gray-500 bg-opacity-75 inset-0 flex justify-center items-center">
+        <Motion.div
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.2, easing: "ease-in-out" }}
+          class="fixed z-[2000] bg-gray-500 bg-opacity-75 inset-0 flex justify-center items-center">
           <div class="bg-white p-2 w-96 h-96 shadow-2xl rounded" onclick={() => setWarning(false)}>modal</div>
-        </div>
+        </Motion.div>
       }
       <div class="p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center">Home page</div>
       <div class="p-3 w-screen gap-3 top-16 flex overflow-x-scroll">

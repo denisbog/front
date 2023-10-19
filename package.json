@@ -18,6 +18,7 @@
     "vite-plugin-solid": "^2.7.0"
   },
   "dependencies": {
+    "@motionone/solid": "^10.16.4",
     "leaflet": "^1.9.4",
     "solid-js": "^1.7.6"
   }
