@@ -19,7 +19,10 @@ function App() {
             transition={{ duration: 0.2, easing: "ease-in-out" }}
             exit={{ opacity: [1, 0] }}
             class="fixed z-[2000] bg-gray-500 bg-opacity-75 inset-0 flex justify-center items-center">
-            <div class="bg-white p-2 w-96 h-96 shadow-2xl rounded" onclick={() => setWarning(false)}>modal</div>
+            <Motion.div
+              animate={{ opacity: [0, 1], scale: [0.7, 1] }}
+              transition={{ delay: 0.2 }}
+              class="bg-white p-2 w-96 h-96 shadow-2xl rounded" onclick={() => setWarning(false)}>modal</Motion.div>
           </Motion.div>
         </Show>
 
