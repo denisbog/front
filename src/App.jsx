@@ -22,7 +22,7 @@ function App() {
           </Motion.div>
         </Show>
       </Presence>
-      <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover relative snap-y">
+      <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover snap-y">
         <div class="p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center snap-start">Home page</div>
         <div class="p-3 h-screen w-screen gap-3 top-16 flex snap-start">
           {
@@ -44,9 +44,8 @@ function App() {
         <div class="h-screen flex justify-center items-center snap-start">
           <div class="p-2 bg-white rounded drop-shadow">Add new post</div>
         </div>
-        <div class="h-48"></div>
-        <div class="absolute bottom-0 inset-x-0 bg-white h-36 bg-opacity-20 text-white p-5">footer</div>
-      </div>
+        <div class="bg-white h-36 bg-opacity-20 text-white p-5 snap-start">Footer</div>
+      </div >
     </>
   )
 }
