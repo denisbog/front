@@ -29,7 +29,7 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - uses: keithweaver/aws-s3-github-action@v1.0.0
-      name: Copy Folder
+      name: Deploy on S3
       with:
         command: sync
         source: ./dist/
@@ -37,4 +37,4 @@ jobs:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: eu-central-1
-        flags: delete
+        flags: --delete
