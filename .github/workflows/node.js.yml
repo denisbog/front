@@ -31,7 +31,7 @@ jobs:
     - uses: keithweaver/aws-s3-github-action@v1.0.0
       name: Copy Folder
       with:
-        command: cp
+        command: sync
         source: ./dist/
         destination: s3://front.softfronts.com/
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
