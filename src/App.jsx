@@ -23,7 +23,7 @@ function App() {
           </Motion.div>
         </Show>
       </Presence>
-      <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover snap-y">
+      <div class="h-min-screen w-screen bg-[url('/background.jpg')] bg-cover snap-y">
         <div class="p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center snap-start">Home page</div>
         <Section title='# user information'>
           <div class="p-3 h-screen w-screen overflow-auto gap-3 top-16 flex snap-start">
