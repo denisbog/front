@@ -12,7 +12,7 @@ export default function Section(props) {
     animate(sectionTitleDiv, { x: -150 }, { duration: 0.2 })
     return sectionLeave
   }
-  onMount(() => { inView(sectionDiv, sectionEnter, { amount: 1 }) })
+  onMount(() => { inView(sectionDiv, sectionEnter, { amount: 0.8 }) })
   return <div ref={sectionDiv} class='relative overflow-clip'>
     <div ref={sectionTitleDiv} class='px-10 py-2 absolute bg-yellow-400 text-lg text-white font-bold rounded drop-shadow-lg top-5 -right-32 z-[2000]'>{props.title}</div>
     {props.children}
