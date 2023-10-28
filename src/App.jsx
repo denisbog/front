@@ -2,6 +2,7 @@ import { Show, createSignal } from "solid-js";
 import Map from "./components/Map";
 import Post from "./components/Post";
 import { Motion, Presence } from "@motionone/solid";
+import Section from "./components/Section";
 
 function App() {
   const [warning, setWarning] = createSignal(false)
@@ -24,26 +25,32 @@ function App() {
       </Presence>
       <div class="h-min-screen w-screen bg-[url('background.jpg')] bg-cover snap-y">
         <div class="p-3 h-14 w-screen bg-white bg-opacity-20 text-white text-3xl items-center snap-start">Home page</div>
-        <div class="p-3 h-screen w-screen gap-3 top-16 flex snap-start">
-          {
-            Array.from({ length: items }).map(_element => {
-              return <Post act={() => setWarning(!warning())} />
-            })
-          }
-        </div>
-        <div class="flex h-screen snap-start">
-          <div class="w-96 overflow-auto snap-y m-2">
+        <Section title='# user information'>
+          <div class="p-3 h-screen w-screen overflow-auto gap-3 top-16 flex snap-start">
             {
-              Array.from({ length: 20 }).map(_elemnt => {
-                return <div class="bg-white p-2 m-2 h-20 rounded snap-start">post</div>
+              Array.from({ length: items }).map(_element => {
+                return <Post act={() => setWarning(!warning())} />
               })
             }
           </div>
-          <div class="bg-white m-2 w-screen rounded bg-opacity-50 p-2"><Map /></div>
-        </div>
-        <div class="h-screen flex justify-center items-center snap-start">
-          <div class="p-2 bg-white rounded drop-shadow">Add new post</div>
-        </div>
+        </Section>
+        <Section title='# find posts'>
+          <div class="flex h-screen snap-start">
+            <div class="w-96 overflow-auto snap-y m-2">
+              {
+                Array.from({ length: 20 }).map(_element => {
+                  return <div class="bg-white p-2 m-2 h-20 rounded snap-start">post</div>
+                })
+              }
+            </div>
+            <div class="bg-white m-2 w-screen rounded bg-opacity-50 p-2"><Map /></div>
+          </div>
+        </Section>
+        <Section title='# add new post'>
+          <div class="h-screen flex justify-center items-center snap-start">
+            <div class="p-2 bg-white rounded drop-shadow">Add new post</div>
+          </div>
+        </Section>
         <div class="bg-white h-36 bg-opacity-20 text-white p-5 snap-start">Footer</div>
       </div >
     </>
