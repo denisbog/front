@@ -3,6 +3,7 @@ import Map from "./components/Map";
 import Post from "./components/Post";
 import { Motion, Presence } from "@motionone/solid";
 import Section from "./components/Section";
+import Translation from "./components/Translation";
 
 function App() {
   const [warning, setWarning] = createSignal(false)
@@ -49,6 +50,11 @@ function App() {
         <Section title='# add new post'>
           <div class="h-screen flex justify-center items-center snap-start">
             <div class="p-2 bg-white rounded drop-shadow">Add new post</div>
+          </div>
+        </Section>
+        <Section title='# translation'>
+          <div class="h-screen flex justify-center items-center snap-start">
+            <Translation />
           </div>
         </Section>
         <div class="bg-white h-36 bg-opacity-20 text-white p-5 snap-start">Footer</div>
